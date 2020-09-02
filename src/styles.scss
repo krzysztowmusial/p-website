@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    // min-height: 100vh;
+    // background: linear-gradient(180deg, #E7E7E7 0%, #F2F0F2 100%);
+}

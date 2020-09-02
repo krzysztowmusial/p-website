@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #E7E7E7 0%, #F2F0F2 100%);
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+
+    .container {
+        position: relative;
+        width: 1000px; //
+        // min-height: 1000px; //
+        margin: auto;
+        background: white; //
+        box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.25), inset -1px -2px 1px rgba(0, 0, 0, 0.1), inset 1px 1px 1px #FFFFFF;
+
+        .leaves {
+
+            &-left {
+                position: absolute;
+                top: 100px;
+                left: -176px;
+                width: 176px;
+                height: calc(100% - 100px);
+                background: url('../../assets/img/left.png') right top;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+            &-right {
+                position: absolute;
+                top: 100px;
+                right: -176px;
+                width: 176px;
+                height: calc(100% - 100px);
+                background: url('../../assets/img/right.png') left top;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .grid {
+            width: 100%;
+            min-height: 1000px;
+            display: grid;
+            grid-template-columns: 60px auto;
+
+            &__menu {
+                background: linear-gradient(180deg, #ECEEF3 0%, #FFFFFF 100%);
+                box-shadow: inset -1px -2px 1px rgba(0, 0, 0, 0.1), inset 1px 1px 1px #FFFFFF;
+            }
+        }
+    }
+
+    footer {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        color: #6D6D6D;
+        font-size: .7em;
+    }
+}
