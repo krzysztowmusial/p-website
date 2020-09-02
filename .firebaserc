@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "krzysztowmusial-p-website": {
+      "hosting": {
+        "website": [
+          "krzysztowmusial-p-website"
+        ]
+      }
+    }
+  }
+}
