@@ -1,0 +1,48 @@
+.menu {
+    padding: 10px 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+
+            &:nth-child(1) {
+                margin-bottom: 40px;
+            }
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    // margin: -10px 0 0 0;
+    // border: 2px solid rgba(128, 128, 128, 0.5);
+    // border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.logo {
+        background: url('../../../../../assets/icons/logo.svg') center center no-repeat;
+        background-size: contain;
+
+        &:hover, &.active {
+            background: url('../../../../../assets/icons/logo2.svg') center center no-repeat;
+            background-size: contain;
+        }
+    }
+}
