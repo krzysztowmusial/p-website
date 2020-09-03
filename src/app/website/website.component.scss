@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
 main {
     width: 100%;
     min-height: 100vh;
     padding: 4rem 0;
     background: linear-gradient(180deg, #E7E7E7 0%, #F2F0F2 100%);
     overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
 
     .container {
         position: relative;
@@ -62,4 +58,22 @@ main {
         color: #6D6D6D;
         font-size: .7em;
     }
+}
+
+@media (max-width: 1000px) {
+
+    main {
+        overflow: auto;
+
+        .container {
+
+            .leaves {
+
+                &-left, &-right {
+                    display: none;
+                }
+            }
+        }
+    }
+
 }

@@ -1,6 +1,75 @@
 <div class="home">
     <app-nav></app-nav>
     <div class="content">
-        home works
+        
+        <section>
+            <div class="header">
+                <h1>{{ home.about.name }} </h1>
+                <h2>{{ home.about.title }}</h2>
+                <div class="hr"></div>
+            </div>
+            <div class="body">
+                <p>{{ home.about.desc }}</p>
+                <ul>
+                    <li>{{ home.about.data.name }}</li>
+                    <li>{{ home.about.data.location }}</li>
+                    <li>{{ home.about.data.contact }}</li>
+                </ul>
+                <ul>
+                    <li>{{ home.about.links.linkedin }}</li>
+                    <li>{{ home.about.links.github }}</li>
+                    <li>{{ home.about.links.dribbble }}</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
+                <h1>Umiejętności</h1>
+                <div class="hr"></div>
+            </div>
+            <div class="body">
+                <ul>
+                    <h3>Frontend</h3>
+                    <li *ngFor="let skill of home.skills.frontend">{{ skill }}</li>
+                </ul>
+                <ul>
+                    <h3>Backend</h3>
+                    <li *ngFor="let skill of home.skills.backend">{{ skill }}</li>
+                </ul>
+                <ul>
+                    <h3>Design</h3>
+                    <li *ngFor="let skill of home.skills.design">{{ skill }}</li>
+                </ul>
+                <ul>
+                    <h3>Pozostałe</h3>
+                    <li *ngFor="let skill of home.skills.other">{{ skill }}</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
+                <h1>Projekty</h1>
+            </div>
+            <div class="body">
+                <div class="card" *ngFor="let project of projects"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
+                <h1>Edukacja</h1>
+                <div class="hr"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
+                <h1>Doświadczenie</h1>
+                <div class="hr"></div>
+            </div>
+        </section>
+
     </div>
 </div>
