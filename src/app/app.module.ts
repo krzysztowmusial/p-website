@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
+// Fontawesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 // Components
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WebsiteComponent } from './website/website.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -32,9 +36,11 @@ import { ContactComponent } from './website/components/contact/contact.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
