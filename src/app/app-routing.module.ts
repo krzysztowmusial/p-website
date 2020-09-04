@@ -11,7 +11,7 @@ import { LoginComponent } from './website/components/login/login.component';
 import { DashboardComponent } from './website/components/dashboard/dashboard.component';
 
 const redirectLoggedInToDashboard = () => redirectLoggedInTo(['/dashboard']);
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
     {path: '', component: WebsiteComponent, 
@@ -22,7 +22,7 @@ const routes: Routes = [
             {path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToDashboard }},
             {path: 'dashboard', component: DashboardComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}
         ]},
-    {path: 'resume', component: ResumeComponent}
+    {path: 'resume', component: ResumeComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}
 ];
 
 @NgModule({

@@ -33,14 +33,13 @@
         color: #222222;
     }
 
-    &.logo {
-        background: url('../../../../../assets/icons/logo.svg') center center no-repeat;
-        background-size: contain;
+    svg {
+        width: 20px;
+        fill: #222222;
+    }
 
-        &:hover, &.active {
-            background: url('../../../../../assets/icons/logo2.svg') center center no-repeat;
-            background-size: contain;
-        }
+    &.logo {
+        cursor: auto;
     }
 
     &.home {
@@ -50,6 +49,10 @@
 
             fa-icon {
                 color: white;
+            }
+
+            svg {
+                fill: white;
             }
         }
     }
@@ -66,7 +69,7 @@
     &.contact {
 
         &:hover, &.active {
-            background: linear-gradient(45deg, #2193b0 0%,#6dd5ed 100% );
+            background: linear-gradient(45deg, #3A7BD5 0%, #00D2FF 100% );
 
             fa-icon {
                 color: white;
@@ -86,7 +89,7 @@
     &.login {
 
         &:hover, &.active {
-            background: linear-gradient(45deg, #1d976c 0%,#93f9b9 100% );
+            background: linear-gradient(45deg, #057295 0%, #00D7B0 100%);
 
             fa-icon {
                 color: white;

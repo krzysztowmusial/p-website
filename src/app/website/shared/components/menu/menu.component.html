@@ -1,11 +1,18 @@
 <div class="menu">
     <ul>
         <li>
-            <div class="icon logo" [routerLink]="['/']"></div>
+            <div class="icon logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                    <path fill="#000" fill-opacity=".5" d="M7.98 7.91a2.926 2.926 0 000 4.18l7.192 7.088c1.781 1.756 4.828.512 4.828-1.97 0-.74-.298-1.449-.828-1.972l-3.193-3.146a2.926 2.926 0 010-4.18l3.193-3.146c.53-.523.828-1.232.828-1.971C20 .31 16.953-.934 15.172.822L7.979 7.91z"/>
+                    <path fill="#222" d="M0 16.965c0 2.698 3.231 4.05 5.121 2.142l6.9-6.965a3.05 3.05 0 000-4.284L5.12.893C3.231-1.015 0 .336 0 3.035v13.93z"/>
+                </svg>
+            </div>
         </li>
         <li>
             <div class="icon home" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <fa-icon [icon]="faHome"></fa-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="101" height="100" fill="none" viewBox="0 0 101 100">
+                    <path d="M100.178 47.14a15 15 0 00-4.736-10.938L61.588 4.435c-6.302-5.913-16.518-5.913-22.82 0L4.914 36.202A15 15 0 00.178 47.141v37.717C.178 93.221 7.403 100 16.314 100h20.513V75.81a5 5 0 015-5H58.53a5 5 0 015 5V100h20.513c8.912 0 16.136-6.78 16.136-15.142V47.141z" clip-rule="evenodd"/>
+                </svg>
             </div>
         </li>
         <li>
