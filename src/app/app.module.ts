@@ -23,6 +23,8 @@ import { ProjectsComponent } from './website/components/projects/projects.compon
 import { ContactComponent } from './website/components/contact/contact.component';
 import { LoginComponent } from './website/components/login/login.component';
 import { DashboardComponent } from './website/components/dashboard/dashboard.component';
+import { DashboardHomeComponent } from './website/components/dashboard/dashboard-home/dashboard-home.component';
+import { DashboardProjectComponent } from './website/components/dashboard/dashboard-project/dashboard-project.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { DashboardComponent } from './website/components/dashboard/dashboard.com
     ContactComponent,
     LoginComponent,
     DashboardComponent,
+    DashboardHomeComponent,
+    DashboardProjectComponent,
   ],
   imports: [
     BrowserModule,

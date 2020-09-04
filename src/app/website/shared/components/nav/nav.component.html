@@ -1,1 +1,7 @@
-<div class="nav"></div>
+<div class="nav">
+    <!-- {{url}} -->
+    <div class="url">
+        <div class="span home" *ngIf="url[0] === ''">Home</div>
+        <div class="span" *ngFor="let link of url; let i = index" [routerLink]="[links[i]]"> {{ link }}</div>
+    </div>
+</div>

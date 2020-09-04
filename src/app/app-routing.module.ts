@@ -9,6 +9,8 @@ import { ProjectsComponent } from './website/components/projects/projects.compon
 import { ContactComponent } from './website/components/contact/contact.component';
 import { LoginComponent } from './website/components/login/login.component';
 import { DashboardComponent } from './website/components/dashboard/dashboard.component';
+import { DashboardHomeComponent } from './website/components/dashboard/dashboard-home/dashboard-home.component';
+import { DashboardProjectComponent } from './website/components/dashboard/dashboard-project/dashboard-project.component';
 
 const redirectLoggedInToDashboard = () => redirectLoggedInTo(['/dashboard']);
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
@@ -20,7 +22,11 @@ const routes: Routes = [
             {path: 'projects', component: ProjectsComponent},
             {path: 'contact', component: ContactComponent},
             {path: 'login', component: LoginComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToDashboard }},
-            {path: 'dashboard', component: DashboardComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}
+            {path: 'dashboard', component: DashboardComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin },
+                children: [
+                    {path: '', component: DashboardHomeComponent},
+                    {path: 'project', component: DashboardProjectComponent}
+                ]}
         ]},
     {path: 'resume', component: ResumeComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}
 ];

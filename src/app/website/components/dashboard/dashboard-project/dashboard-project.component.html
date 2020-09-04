@@ -1,0 +1,29 @@
+<div class="dashboard-project">
+    <app-nav></app-nav>
+    <div class="content">
+
+        <section>
+            <div class="header">
+                <h1>Projekt</h1>
+                <div class="hr"></div>
+            </div>
+            <div class="body">
+
+                <form [formGroup]="projectForm" (ngSubmit)="send(projectForm.value)">
+                    <div class="input">
+                        <input 
+                            formControlName="name" 
+                            type="text" 
+                            placeholder="Name" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+    </div>
+</div>
