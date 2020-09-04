@@ -1,0 +1,44 @@
+<div class="login">
+    <app-nav></app-nav>
+    <div class="content">
+
+        <section>
+            <div class="header">
+                <h1>Zaloguj się</h1>
+                <div class="hr"></div>
+            </div>
+            <div class="body">
+
+                <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+                    <div class="input" [ngClass]="{'invalid': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched),
+                                                    'valid': loginForm.controls['email'].valid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)}">
+                        <input 
+                            formControlName="email" 
+                            type="email" 
+                            placeholder="Email" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faMail"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input" [ngClass]="{'invalid': loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched),
+                                                    'valid': loginForm.controls['password'].valid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)}">
+                        <input 
+                            formControlName="password" 
+                            type="password" 
+                            placeholder="Password" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faPassword"></fa-icon>
+                        </div>
+                    </div>
+                
+                    <div class="btns">
+                        <input type="submit" value="Login" [disabled]="!loginForm.valid">
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </div>
+</div>

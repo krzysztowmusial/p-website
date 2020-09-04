@@ -21,6 +21,8 @@ import { NavComponent } from './website/shared/components/nav/nav.component';
 import { HomeComponent } from './website/components/home/home.component';
 import { ProjectsComponent } from './website/components/projects/projects.component';
 import { ContactComponent } from './website/components/contact/contact.component';
+import { LoginComponent } from './website/components/login/login.component';
+import { DashboardComponent } from './website/components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ContactComponent } from './website/components/contact/contact.component
     HomeComponent,
     ProjectsComponent,
     ContactComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

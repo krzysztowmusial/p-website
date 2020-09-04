@@ -4,13 +4,34 @@
             <div class="icon logo" [routerLink]="['/']"></div>
         </li>
         <li>
-            <div class="icon logo" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></div>
+            <div class="icon" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <fa-icon [icon]="faHome"></fa-icon>
+            </div>
         </li>
         <li>
-            <div class="icon logo" [routerLink]="['/projects']" routerLinkActive="active"></div>
+            <div class="icon" [routerLink]="['/projects']" routerLinkActive="active">
+                <fa-icon [icon]="faProjects"></fa-icon>
+            </div>
         </li>
         <li>
-            <div class="icon logo" [routerLink]="['/contact']" routerLinkActive="active"></div>
+            <div class="icon" [routerLink]="['/contact']" routerLinkActive="active">
+                <fa-icon [icon]="faContact"></fa-icon>
+            </div>
+        </li>
+        <li>
+            <div class="icon" [routerLink]="['/dashboard']" routerLinkActive="active" *ngIf="check()">
+                <fa-icon [icon]="faDashboard"></fa-icon>
+            </div>
+        </li>
+        <li>
+            <div class="icon" [routerLink]="['/login']" routerLinkActive="active" *ngIf="!check()">
+                <fa-icon [icon]="faLogin"></fa-icon>
+            </div>
+        </li>
+        <li>
+            <div class="icon logout" *ngIf="check()" (click)="logout()">
+                <fa-icon [icon]="faLogin"></fa-icon>
+            </div>
         </li>
     </ul>
 </div>

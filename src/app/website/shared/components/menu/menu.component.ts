@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome, faFolder, faEnvelope, faKey, faLaptop } from '@fortawesome/free-solid-svg-icons'
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+    faHome = faHome;
+    faProjects = faFolder;
+    faContact = faEnvelope;
+    faDashboard = faLaptop;
+    faLogin = faKey;
 
-  ngOnInit(): void {
-  }
+    constructor(private auth: AuthService) { }
 
+    ngOnInit(): void {
+    }
+
+    check() {
+        return this.auth.authCheck();
+    }
+
+    logout() {
+        this.auth.logout();
+    }
 }

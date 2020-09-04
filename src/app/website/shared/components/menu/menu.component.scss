@@ -31,9 +31,8 @@
     cursor: pointer;
     transition: .2s;
 
-    svg {
-        width: 20px;
-        height: 20px;
+    fa-icon {
+        font-size: 20px;
     }
 
     &.logo {
@@ -43,6 +42,13 @@
         &:hover, &.active {
             background: url('../../../../../assets/icons/logo2.svg') center center no-repeat;
             background-size: contain;
+        }
+    }
+
+    &.logout {
+        
+        fa-icon {
+            color: tomato;
         }
     }
 }
