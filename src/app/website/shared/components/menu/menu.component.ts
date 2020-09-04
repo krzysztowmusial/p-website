@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome, faFolder, faEnvelope, faKey, faLaptop } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faFolder, faEnvelope, faKey, faLaptop, faUnlock, faLock } from '@fortawesome/free-solid-svg-icons'
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -13,7 +13,8 @@ export class MenuComponent implements OnInit {
     faProjects = faFolder;
     faContact = faEnvelope;
     faDashboard = faLaptop;
-    faLogin = faKey;
+    faLogin = faUnlock;
+    faLogout = faLock;
 
     constructor(private auth: AuthService) { }
 

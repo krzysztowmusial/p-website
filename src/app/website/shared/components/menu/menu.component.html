@@ -4,33 +4,33 @@
             <div class="icon logo" [routerLink]="['/']"></div>
         </li>
         <li>
-            <div class="icon" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <div class="icon home" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <fa-icon [icon]="faHome"></fa-icon>
             </div>
         </li>
         <li>
-            <div class="icon" [routerLink]="['/projects']" routerLinkActive="active">
+            <div class="icon projects" [routerLink]="['/projects']" routerLinkActive="active">
                 <fa-icon [icon]="faProjects"></fa-icon>
             </div>
         </li>
         <li>
-            <div class="icon" [routerLink]="['/contact']" routerLinkActive="active">
+            <div class="icon contact" [routerLink]="['/contact']" routerLinkActive="active">
                 <fa-icon [icon]="faContact"></fa-icon>
             </div>
         </li>
-        <li>
-            <div class="icon" [routerLink]="['/dashboard']" routerLinkActive="active" *ngIf="check()">
+        <li *ngIf="check()">
+            <div class="icon dashboard" [routerLink]="['/dashboard']" routerLinkActive="active">
                 <fa-icon [icon]="faDashboard"></fa-icon>
             </div>
         </li>
-        <li>
-            <div class="icon" [routerLink]="['/login']" routerLinkActive="active" *ngIf="!check()">
+        <li *ngIf="!check()">
+            <div class="icon login" [routerLink]="['/login']" routerLinkActive="active">
                 <fa-icon [icon]="faLogin"></fa-icon>
             </div>
         </li>
-        <li>
-            <div class="icon logout" *ngIf="check()" (click)="logout()">
-                <fa-icon [icon]="faLogin"></fa-icon>
+        <li *ngIf="check()">
+            <div class="icon logout" (click)="logout()">
+                <fa-icon [icon]="faLogout"></fa-icon>
             </div>
         </li>
     </ul>

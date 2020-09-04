@@ -12,9 +12,6 @@
             &:nth-child(1) {
                 margin-bottom: 50px;
             }
-            &:nth-last-child(1) {
-                margin-bottom: 0px;
-            }
         }
     }
 }
@@ -24,7 +21,7 @@
     height: 40px;
     // margin: -10px 0 0 0;
     // border: 2px solid rgba(128, 128, 128, 0.5);
-    // border-radius: 10px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +30,7 @@
 
     fa-icon {
         font-size: 20px;
+        color: #222222;
     }
 
     &.logo {
@@ -42,6 +40,57 @@
         &:hover, &.active {
             background: url('../../../../../assets/icons/logo2.svg') center center no-repeat;
             background-size: contain;
+        }
+    }
+
+    &.home {
+
+        &:hover, &.active {
+            background: linear-gradient(45deg, #eb3349 0%,#f45c43 100% );
+
+            fa-icon {
+                color: white;
+            }
+        }
+    }
+    &.projects {
+
+        &:hover, &.active {
+            background: linear-gradient(45deg, #ec008c 0%,#fc6767 100% );
+
+            fa-icon {
+                color: white;
+            }
+        }
+    }
+    &.contact {
+
+        &:hover, &.active {
+            background: linear-gradient(45deg, #2193b0 0%,#6dd5ed 100% );
+
+            fa-icon {
+                color: white;
+            }
+        }
+    }
+    &.dashboard {
+
+        &:hover, &.active {
+            background: linear-gradient(45deg, #fe8c00 0%,#f83600 100% );
+
+            fa-icon {
+                color: white;
+            }
+        }
+    }
+    &.login {
+
+        &:hover, &.active {
+            background: linear-gradient(45deg, #1d976c 0%,#93f9b9 100% );
+
+            fa-icon {
+                color: white;
+            }
         }
     }
 
