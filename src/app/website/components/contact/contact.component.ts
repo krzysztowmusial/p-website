@@ -35,7 +35,6 @@ export class ContactComponent implements OnInit {
             message: form.message
         }
         this.contact.send(message);
-        console.log(form);
         this.contactForm.reset();
     }
 
