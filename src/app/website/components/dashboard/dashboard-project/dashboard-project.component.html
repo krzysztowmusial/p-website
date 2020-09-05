@@ -4,13 +4,14 @@
 
         <section>
             <div class="header">
-                <h1>Projekt</h1>
+                <h1>Projekt edytor</h1>
                 <div class="hr"></div>
             </div>
             <div class="body">
 
-                <form [formGroup]="projectForm" (ngSubmit)="send(projectForm.value)">
-                    <div class="input">
+                <form [formGroup]="projectForm" (ngSubmit)="submit(projectForm.value)">
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['name'].invalid && (projectForm.controls['name'].dirty || projectForm.controls['name'].touched),
+                                                    'valid': projectForm.controls['name'].valid && (projectForm.controls['name'].dirty || projectForm.controls['name'].touched)}">
                         <input 
                             formControlName="name" 
                             type="text" 
@@ -20,8 +21,94 @@
                             <fa-icon [icon]="faName"></fa-icon>
                         </div>
                     </div>
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['category'].invalid && (projectForm.controls['category'].dirty || projectForm.controls['category'].touched),
+                                                    'valid': projectForm.controls['category'].valid && (projectForm.controls['category'].dirty || projectForm.controls['category'].touched)}">
+                        <input 
+                            formControlName="category" 
+                            type="text" 
+                            placeholder="Category" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['desc'].invalid && (projectForm.controls['desc'].dirty || projectForm.controls['desc'].touched),
+                                                    'valid': projectForm.controls['desc'].valid && (projectForm.controls['desc'].dirty || projectForm.controls['desc'].touched)}">
+                        <input 
+                            formControlName="desc" 
+                            type="text" 
+                            placeholder="Description" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['tags'].invalid && (projectForm.controls['tags'].dirty || projectForm.controls['tags'].touched),
+                                                    'valid': projectForm.controls['tags'].valid && (projectForm.controls['tags'].dirty || projectForm.controls['tags'].touched)}">
+                        <input 
+                            formControlName="tags" 
+                            type="text" 
+                            placeholder="Tags" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['repo'].invalid && (projectForm.controls['repo'].dirty || projectForm.controls['repo'].touched),
+                                                    'valid': projectForm.controls['repo'].valid && (projectForm.controls['repo'].dirty || projectForm.controls['repo'].touched)}">
+                        <input 
+                            formControlName="repo" 
+                            type="text" 
+                            placeholder="Repository" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input" [ngClass]="{'invalid': projectForm.controls['www'].invalid && (projectForm.controls['www'].dirty || projectForm.controls['www'].touched),
+                                                    'valid': projectForm.controls['www'].valid && (projectForm.controls['www'].dirty || projectForm.controls['www'].touched)}">
+                        <input 
+                            formControlName="www" 
+                            type="text" 
+                            placeholder="WWW" 
+                        >
+                        <div class="input__icon">
+                            <fa-icon [icon]="faName"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="input-files">
+                        <label for="inputFile">
+                            Upload
+                            <input 
+                                id="inputFile"
+                                #inputFile 
+                                type='file' 
+                                (change)="files($event)"
+                            >
+                        </label>
+                        <ul>
+                            <li *ngFor="let image of images; let i = index" (click)="images.splice(i, 1)">{{ image.name }}</li>
+                        </ul>
+                    </div>
+                    <!-- ///////////////////////////////////////////////////// -->
+                    <div class="btns">
+                        <input type="submit" value="Submit" [disabled]="!projectForm.valid">
+                    </div>
                 </form>
 
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
+                <h1>Images</h1>
+            </div>
+            <div class="body">
+                <div class="images">
+                    <div class="image" *ngFor="let image of project?.images">
+                        <img [src]="image.url" [alt]="image.name">
+                    </div>
+                </div>
             </div>
         </section>
 

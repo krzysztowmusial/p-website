@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { ProjectsService } from 'src/app/website/shared/services/projects.service';
 
 @Component({
   selector: 'app-dashboard-home',
@@ -10,9 +11,15 @@ export class DashboardHomeComponent implements OnInit {
 
     faAdd = faPlusCircle;
 
-  constructor() { }
+    projects = [];
 
-  ngOnInit(): void {
-  }
+    constructor(private projectsService: ProjectsService) { }
+
+    ngOnInit(): void {
+        this.projectsService.getProjects().subscribe((projects)=>{
+            this.projects = projects;
+            this.projects.reverse();
+        })
+    }
 
 }

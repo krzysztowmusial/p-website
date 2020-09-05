@@ -15,6 +15,14 @@
                         <div class="element__name">Dodaj</div>
                     </div>
                 </div>
+                <div class="elements" *ngFor="let project of projects">
+                    <div class="element">
+                        <div class="element__icon" [routerLink]="['/dashboard/project', {id: project.id}]">
+                            <!-- <fa-icon [icon]="faAdd"></fa-icon> -->
+                        </div>
+                        <div class="element__name">{{ project.name }}</div>
+                    </div>
+                </div>
             </div>
         </section>
 

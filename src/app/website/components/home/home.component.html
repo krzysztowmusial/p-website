@@ -53,7 +53,11 @@
                 <h1>Projekty</h1>
             </div>
             <div class="body">
-                <div class="card" *ngFor="let project of projects"></div>
+                <div class="card" *ngFor="let project of projects | slice:0:3" 
+                    [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
+                    [routerLink]="['/projects', {id: project.id}]"
+                >
+                </div>
             </div>
         </section>
 

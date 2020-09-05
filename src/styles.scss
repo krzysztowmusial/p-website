@@ -112,6 +112,41 @@ form {
         }
     }
 
+    .input-files {
+        margin-top: 20px;
+    
+        label {
+            // width: 100%;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 13.3px;
+            color: white;
+            background: #01afb0;
+            cursor: pointer;
+    
+            input[type=file] {
+                display: none;
+            }
+        }
+    
+        ul {
+            margin-top: 10px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+    
+            li {
+                margin: 0 10px 10px 0;
+                padding: 5px 10px;
+                color: white;
+                background: #33dbdb;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
     .btns {
         margin-top: 20px;
         display: flex;
