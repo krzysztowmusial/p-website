@@ -1,4 +1,5 @@
 .nav {
+    --color: #01afb0;
     width: 100%;
     height: 60px;
     padding: 0 40px;
@@ -24,9 +25,8 @@
             box-sizing: content-box;
 
             &:nth-last-child(1), &:hover, &.home {
-                // font-weight: bold;
-                color: #01afb0;
-                border-bottom: 2px solid #01afb0;
+                color: var(--color);
+                border-bottom: 2px solid var(--color);
             }
         }
     }

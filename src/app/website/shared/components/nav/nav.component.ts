@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,14 +6,22 @@ import { Router } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, AfterViewInit {
+
+    @ViewChild("nav") nav: ElementRef;
+    @Input() color = '#01afb0';
 
     url;
     links = [];
 
     constructor(private router: Router) {}
 
+    ngAfterViewInit(): void {
+        this.nav.nativeElement.style = '--color:' + this.color;
+    }
+
     ngOnInit(): void {
+
         let temp = this.router.url.split('/');
         temp.shift();
 
