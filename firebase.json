@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "website",
-      "public": "dist/website",
+      "public": "dist",
       "ignore": [
         "**/.*"
       ],
