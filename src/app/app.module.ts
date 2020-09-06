@@ -19,12 +19,14 @@ import { ResumeComponent } from './resume/resume.component';
 import { MenuComponent } from './website/shared/components/menu/menu.component';
 import { NavComponent } from './website/shared/components/nav/nav.component';
 import { HomeComponent } from './website/components/home/home.component';
-import { ProjectsComponent } from './website/components/projects/projects.component';
 import { ContactComponent } from './website/components/contact/contact.component';
 import { LoginComponent } from './website/components/login/login.component';
 import { DashboardComponent } from './website/components/dashboard/dashboard.component';
 import { DashboardHomeComponent } from './website/components/dashboard/dashboard-home/dashboard-home.component';
 import { DashboardProjectComponent } from './website/components/dashboard/dashboard-project/dashboard-project.component';
+import { PortfolioComponent } from './website/components/portfolio/portfolio.component';
+import { PortfolioHomeComponent } from './website/components/portfolio/portfolio-home/portfolio-home.component';
+import { PortfolioProjectComponent } from './website/components/portfolio/portfolio-project/portfolio-project.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { DashboardProjectComponent } from './website/components/dashboard/dashbo
     MenuComponent,
     NavComponent,
     HomeComponent,
-    ProjectsComponent,
     ContactComponent,
     LoginComponent,
     DashboardComponent,
     DashboardHomeComponent,
     DashboardProjectComponent,
+    PortfolioComponent,
+    PortfolioHomeComponent,
+    PortfolioProjectComponent,
   ],
   imports: [
     BrowserModule,
