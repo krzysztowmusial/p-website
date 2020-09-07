@@ -53,10 +53,13 @@
                 <h1>Projekty</h1>
             </div>
             <div class="body">
-                <div class="card" *ngFor="let project of projects | slice:0:3" 
-                    [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
-                    [routerLink]="['/projects', {id: project.id}]"
-                >
+                <div class="cards">
+                    <div class="card" *ngFor="let project of projects | slice:0:4" [routerLink]="['/portfolio/project', {id: project.id}]">
+                        <div class="card__preview" 
+                            [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
+                        ></div>
+                        <span>{{ project.name }}</span>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,1 +1,36 @@
-<p>portfolio-project works!</p>
+<div class="project">
+    <app-nav [color]="'#f14948'"></app-nav>
+    <div class="content">
+
+        <section class="projekt">
+            <div class="projekt__preview">
+                <div class="projekt__preview__image" #preview></div>
+                <div class="projekt__preview__info">
+                    <div>
+                        <h2> {{ project?.category }} </h2>
+                        <h1> {{ project?.name }} </h1>
+                        <h3> {{ project?.date.toDate() | date: 'M/d/yyyy' }} </h3>
+                        <p> {{ project?.desc }} </p>
+                    </div>
+                    <div class="projekt__preview__info__tags">
+                        <span *ngFor="let tag of tags"> {{ tag }} </span>
+                    </div>
+                </div>
+            </div>
+            <div class="projekt__images">
+                <div class="projekt__images__image" *ngFor="let image of images; let i = index" [ngStyle]="{ 'background': 'url(' + image.url + ')' }" (click)="changePreview(i)"></div>
+            </div>
+        </section>
+
+        <!-- <section>
+            <div class="header">
+                <h1>Case study</h1>
+                <div class="hr"></div>
+            </div>
+            <div class="body">
+
+            </div>
+        </section> -->
+
+    </div>
+</div>
