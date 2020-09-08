@@ -36,11 +36,27 @@
             margin-top: 5px;
         }
 
+        &.messages {
+
+            .element__icon {
+                background: linear-gradient(45deg, #3A7BD5 0%, #00D2FF 100% );
+            }
+        }
+
         &.add {
 
             .element__icon {
                 background:linear-gradient(45deg, #02aab0 0%,#00cdac 100% );
             }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .dashboard-home {
+    
+        .content {
+            padding: 20px;
         }
     }
 }

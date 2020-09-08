@@ -104,3 +104,30 @@
         }
     }
 }
+
+
+@media (max-width: 1000px) {
+
+    .menu {
+        padding: 10px 20px;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                margin: 0;
+
+                &.web {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+}

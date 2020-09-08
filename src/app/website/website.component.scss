@@ -64,9 +64,29 @@ main {
 @media (max-width: 1000px) {
 
     main {
-        overflow: auto;
+        // overflow: auto;
+        padding: 0;
+
+        footer {
+            display: none;
+        }
 
         .container {
+            width: 100%;
+            height: 100%;
+
+            .grid {
+                height: 100%;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+                &__menu {
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                }
+            }
 
             .leaves {
 

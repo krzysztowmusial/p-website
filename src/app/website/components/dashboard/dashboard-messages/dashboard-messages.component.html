@@ -1,0 +1,29 @@
+<div class="dashboard-messages">
+    <app-nav [color]="'#01afb0'"></app-nav>
+    <div class="content">
+
+        <section>
+
+            <ul>
+                <li *ngFor="let message of messages; let i = index;" (click)="expand(message, i)">
+                    <div class="header">
+                        <div>
+                            <h2> {{ message.date.toDate() | dateAgo }} </h2>
+                            <h1> {{ message.name }} </h1>
+                            <!-- <h2> {{ message.email }} </h2> -->
+                        </div>
+                        <div>
+                            O
+                        </div>
+                    </div>
+                    <div class="body" *ngIf="i == value">
+                        <h2> {{ message.email }} </h2>
+                        <p> {{ message.message }} </p>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+    </div>
+</div>

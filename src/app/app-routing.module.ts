@@ -13,6 +13,7 @@ import { DashboardProjectComponent } from './website/components/dashboard/dashbo
 import { PortfolioComponent } from './website/components/portfolio/portfolio.component';
 import { PortfolioHomeComponent } from './website/components/portfolio/portfolio-home/portfolio-home.component';
 import { PortfolioProjectComponent } from './website/components/portfolio/portfolio-project/portfolio-project.component';
+import { DashboardMessagesComponent } from './website/components/dashboard/dashboard-messages/dashboard-messages.component';
 
 const redirectLoggedInToDashboard = () => redirectLoggedInTo(['/dashboard']);
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
@@ -30,7 +31,8 @@ const routes: Routes = [
             {path: 'dashboard', component: DashboardComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin },
                 children: [
                     {path: '', component: DashboardHomeComponent},
-                    {path: 'project', component: DashboardProjectComponent}
+                    {path: 'project', component: DashboardProjectComponent},
+                    {path: 'messages', component: DashboardMessagesComponent}
                 ]}
         ]},
     {path: 'resume', component: ResumeComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}

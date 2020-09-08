@@ -4,6 +4,22 @@
 
         <section>
             <div class="header">
+                <h1>Admin</h1>
+            </div>
+            <div class="body">
+                <div class="elements">
+                    <div class="element messages">
+                        <div class="element__icon" [routerLink]="['/dashboard/messages']">
+                            <fa-icon [icon]="faMessages"></fa-icon>
+                        </div>
+                        <div class="element__name">Messages</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="header">
                 <h1>Projekty</h1>
             </div>
             <div class="body">

@@ -27,6 +27,8 @@ import { DashboardProjectComponent } from './website/components/dashboard/dashbo
 import { PortfolioComponent } from './website/components/portfolio/portfolio.component';
 import { PortfolioHomeComponent } from './website/components/portfolio/portfolio-home/portfolio-home.component';
 import { PortfolioProjectComponent } from './website/components/portfolio/portfolio-project/portfolio-project.component';
+import { DashboardMessagesComponent } from './website/components/dashboard/dashboard-messages/dashboard-messages.component';
+import { DateAgoPipe } from './website/shared/pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { PortfolioProjectComponent } from './website/components/portfolio/portfo
     PortfolioComponent,
     PortfolioHomeComponent,
     PortfolioProjectComponent,
+    DashboardMessagesComponent,
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,

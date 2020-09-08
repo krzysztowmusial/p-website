@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome, faFolder, faEnvelope, faKey, faLaptop, faUnlock, faLock } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faFolder, faEnvelope, faLaptop, faUnlock, faLock } from '@fortawesome/free-solid-svg-icons'
 import { AuthService } from '../../services/auth.service';
 
 @Component({
