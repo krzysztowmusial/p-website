@@ -88,25 +88,7 @@
                 <div class="hr"></div>
             </div>
             <div class="body">
-                <!-- <div class="cards">
-                    <div class="card" *ngFor="let project of projects | slice:0:4" [routerLink]="['/portfolio/project', {id: project.id}]">
-                        <div class="card__preview" 
-                            [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
-                        ></div>
-                        <span>{{ project.name }}</span>
-                    </div>
-                </div> -->
-                <div class="slider">
-                    <div class="slider__cards">
-                        <div class="slider__card"></div>
-                        <div class="slider__card"></div>
-                        <div class="slider__card"></div>
-                        <div class="slider__card"></div>
-                        <div class="slider__card"></div>
-                        <div class="slider__card"></div>
-                        <div class="slider__margin-right"></div>
-                    </div>
-                </div>
+                <app-slider [items]="projects"></app-slider>
             </div>
         </section>
 

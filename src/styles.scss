@@ -240,35 +240,6 @@ section {
                 }
             }
         }
-
-        .slider {
-            width: calc(100% + 80px);
-            margin: 0 -40px;
-            max-width: 940px;
-            overflow-x: hidden;
-
-            &__cards {
-                padding-left: 40px;
-                overflow-x: scroll;
-                display: flex;
-            }
-
-            &__card {
-                flex-shrink: 0;
-                width: 250px;
-                height: 300px;
-                margin-right: 20px;
-                background: pink;
-                border-radius: 10px;
-            }
-
-            &__margin-right {
-                min-width: 20px;
-                max-width: 20px;
-                height: 300px;
-                // background: blue;
-            }
-        }
     }
 }
 
