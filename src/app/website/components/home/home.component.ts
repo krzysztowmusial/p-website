@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../../shared/services/projects.service';
+import { faUser, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,9 @@ import { ProjectsService } from '../../shared/services/projects.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+    faName = faUser;
+    faContact = faEnvelope;
 
     home = null;
     projects = null;
@@ -37,10 +41,10 @@ export class HomeComponent implements OnInit {
                 }
             },
             skills: {
-                frontend: ['html', 'css', 'js'],
-                backend: ['html', 'css', 'js'],
-                design: ['html', 'css', 'js'],
-                other: ['html', 'css', 'js'],
+                frontend: ['HTML', 'CSS / SASS', 'JavaScript', 'TypeScript', 'Angular', 'RWD, SPA'],
+                backend: ['node.js / Express', 'MySQL / MariaDB', 'MongoDB'],
+                design: ['Figma', 'Adobe XD', 'Photoshop'],
+                other: ['git', 'terminal'],
             }
         }
 

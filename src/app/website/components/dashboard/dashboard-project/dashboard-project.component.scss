@@ -5,3 +5,12 @@
         padding: 40px;
     }
 }
+
+@media (max-width: 1000px) {
+    .dashboard-project {
+    
+        .content {
+            padding: 80px 20px;
+        }
+    }
+}

@@ -10,15 +10,49 @@
             </div>
             <div class="body">
                 <p>{{ home.about.desc }}</p>
-                <ul>
-                    <li>{{ home.about.data.name }}</li>
-                    <li>{{ home.about.data.location }}</li>
-                    <li>{{ home.about.data.contact }}</li>
+                <ul class="info">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M7.5 6.875a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM3.438 13.125v-1.25a2.5 2.5 0 012.5-2.5h3.125a2.5 2.5 0 012.5 2.5v1.25"/>
+                            <path stroke="#333" d="M3.438 13.125h8.124"/>
+                        </svg>
+                        {{ home.about.data.name }}
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.75A1.875 1.875 0 107.5 5a1.875 1.875 0 000 3.75z"/>
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M11.036 10.41l-2.652 2.652a1.248 1.248 0 01-1.767 0l-2.653-2.651a5 5 0 117.072 0v0z"/>
+                        </svg>
+                        {{ home.about.data.location }}
+                    </li>
+                    <li [routerLink]="['/contact']">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M11.875 3.125h-8.75c-.69 0-1.25.56-1.25 1.25v6.25c0 .69.56 1.25 1.25 1.25h8.75c.69 0 1.25-.56 1.25-1.25v-6.25c0-.69-.56-1.25-1.25-1.25z"/>
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M1.875 4.375L7.5 8.125l5.625-3.75"/>
+                        </svg>
+                        Kontakt
+                        <!-- {{ home.about.data.contact }} -->
+                    </li>
                 </ul>
-                <ul>
-                    <li>{{ home.about.links.linkedin }}</li>
-                    <li>{{ home.about.links.github }}</li>
-                    <li>{{ home.about.links.dribbble }}</li>
+                <ul class="info">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                        </svg>
+                        <a href="{{ home.about.links.linkedin }}">Linkedin</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                        </svg>
+                        <a href="{{ home.about.links.github }}">GitHub</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                            <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                        </svg>
+                        <a href="{{ home.about.links.dribbble }}">Dribbble</a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -28,20 +62,20 @@
                 <h1>Umiejętności</h1>
                 <div class="hr"></div>
             </div>
-            <div class="body">
-                <ul>
+            <div class="body umiejetnosci">
+                <ul class="skills">
                     <h3>Frontend</h3>
                     <li *ngFor="let skill of home.skills.frontend">{{ skill }}</li>
                 </ul>
-                <ul>
+                <ul class="skills">
                     <h3>Backend</h3>
                     <li *ngFor="let skill of home.skills.backend">{{ skill }}</li>
                 </ul>
-                <ul>
+                <ul class="skills">
                     <h3>Design</h3>
                     <li *ngFor="let skill of home.skills.design">{{ skill }}</li>
                 </ul>
-                <ul>
+                <ul class="skills">
                     <h3>Pozostałe</h3>
                     <li *ngFor="let skill of home.skills.other">{{ skill }}</li>
                 </ul>
@@ -51,14 +85,26 @@
         <section>
             <div class="header">
                 <h1>Projekty</h1>
+                <div class="hr"></div>
             </div>
             <div class="body">
-                <div class="cards">
+                <!-- <div class="cards">
                     <div class="card" *ngFor="let project of projects | slice:0:4" [routerLink]="['/portfolio/project', {id: project.id}]">
                         <div class="card__preview" 
                             [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
                         ></div>
                         <span>{{ project.name }}</span>
+                    </div>
+                </div> -->
+                <div class="slider">
+                    <div class="slider__cards">
+                        <div class="slider__card"></div>
+                        <div class="slider__card"></div>
+                        <div class="slider__card"></div>
+                        <div class="slider__card"></div>
+                        <div class="slider__card"></div>
+                        <div class="slider__card"></div>
+                        <div class="slider__margin-right"></div>
                     </div>
                 </div>
             </div>
