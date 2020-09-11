@@ -30,6 +30,7 @@ import { PortfolioProjectComponent } from './website/components/portfolio/portfo
 import { DashboardMessagesComponent } from './website/components/dashboard/dashboard-messages/dashboard-messages.component';
 import { DateAgoPipe } from './website/shared/pipes/date-ago.pipe';
 import { SliderComponent } from './website/shared/components/slider/slider.component';
+import { GalleryComponent } from './website/shared/components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SliderComponent } from './website/shared/components/slider/slider.compo
     DashboardMessagesComponent,
     DateAgoPipe,
     SliderComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

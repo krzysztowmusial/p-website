@@ -2,6 +2,44 @@
     <app-nav [color]="'#f14948'"></app-nav>
     <div class="content">
 
+        <section>
+            <div class="projekt" *ngIf="project">
+                <div class="projekt__preview" [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center'}"></div>
+                <div class="projekt__info">
+                    <div>
+                        <div class="projekt__info__title">
+                            <div>
+                                <h2>{{ project.category }}</h2>
+                                <h1>{{ project.name }}</h1>
+                                <h3>{{ project.date.toDate() | dateAgo }}</h3>
+                            </div>
+                            <div class="projekt__info__title__links">
+                                <a href="project.repo"></a>
+                                <a href="project.www"></a>
+                            </div>
+                        </div>
+                        <div class="projekt__info__desc">
+                            <p>{{ project.desc }}</p>
+                        </div>
+                    </div>
+                    <div class="projekt__info__tags">
+                        <span *ngFor="let tag of tags"> {{ tag }} </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section *ngIf="images">
+            <app-gallery [items]="images"></app-gallery>
+        </section>
+
+    </div>
+</div>
+
+<!-- <div class="project">
+    <app-nav [color]="'#f14948'"></app-nav>
+    <div class="content">
+
         <section class="projekt">
             <div class="projekt__preview">
                 <div class="projekt__preview__image" #preview></div>
@@ -22,15 +60,5 @@
             </div>
         </section>
 
-        <!-- <section>
-            <div class="header">
-                <h1>Case study</h1>
-                <div class="hr"></div>
-            </div>
-            <div class="body">
-
-            </div>
-        </section> -->
-
     </div>
-</div>
+</div> -->

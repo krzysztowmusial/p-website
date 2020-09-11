@@ -1,0 +1,87 @@
+.slider {
+    width: calc(100% + 80px);
+    margin: 0 -40px;
+    max-width: 940px;
+    overflow: hidden;
+    position: relative;
+
+    &__nav-left, &__nav-right {
+        z-index: 1;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d9dade;
+        border-radius: 50%;
+        background: white;
+        transform: translate(0, -50%);
+        display: none;
+
+        // fa-icon {
+        //     color: #d9dade;
+        // }
+
+        &.active {
+            display: flex;
+            cursor: pointer;
+            
+            fa-icon {
+                color: black;
+            }
+        }
+    }
+    &__nav-left {
+        top: 50%;
+        left: 5px;
+    }
+    &__nav-right {
+        top: 50%;
+        right: 5px;
+    }
+
+    &__cards {
+        padding-left: 40px;
+        // overflow-x: hidden;
+        display: flex;
+    }
+
+    &__card {
+        flex-shrink: 0;
+        width: 250px;
+        height: 300px;
+        margin-right: 40px;
+        background: pink;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &__margin-right {
+        min-width: 20px;
+        max-width: 20px;
+        height: 300px;
+        // background: blue;
+    }
+}
+
+.sliders {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+
+    .slider {
+        position: static;
+    }
+
+    .slider__nav-left, .slider__nav-right {
+        display: none;
+
+        &.active {
+            display: none;
+        }
+    }
+}
