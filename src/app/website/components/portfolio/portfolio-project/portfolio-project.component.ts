@@ -31,7 +31,6 @@ export class PortfolioProjectComponent implements OnInit {
                 }
             });
             this.images.reverse();
-            console.log(this.images)
         })
     }
 

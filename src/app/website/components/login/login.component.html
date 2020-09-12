@@ -3,11 +3,12 @@
     <div class="content">
 
         <section>
-            <div class="header">
-                <h1>Zaloguj się</h1>
-                <div class="hr"></div>
-            </div>
-            <div class="body">
+            <header>
+                <div class="left">
+                    <h1>Zaloguj się</h1>
+                </div>
+            </header>
+            <article>
 
                 <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
                     <div class="input" [ngClass]="{'invalid': loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched),
@@ -38,7 +39,7 @@
                     </div>
                 </form>
 
-            </div>
+            </article>
         </section>
     </div>
 </div>

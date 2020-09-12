@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit, AfterViewInit {
 
     @ViewChild("nav") nav: ElementRef;
-    @Input() color = '#01afb0';
+    @Input() color = 'dodgerblue';
 
     url;
     links = [];

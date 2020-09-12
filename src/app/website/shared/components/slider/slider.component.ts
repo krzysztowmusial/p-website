@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
-
 import { gsap } from 'gsap';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,13 +16,11 @@ export class SliderComponent implements OnInit {
 
     @ViewChild('slider') slider: ElementRef;
 
-    // items = ['1', '2', '3', '4', '5'];
     item = {
-        // padding: 40,
-        width: 250 + 40,
-        position: 0
+        width: 250 + 40,    // width + padding
+        position: 0         // starting position
     }
-    touches = [];
+    touches = [];           // list of touches in mobile version
     itemsPerScreen = null;
     itemsOut = 0;
 

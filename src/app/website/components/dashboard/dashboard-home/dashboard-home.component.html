@@ -1,12 +1,14 @@
 <div class="dashboard-home">
-    <app-nav [color]="'#01afb0'"></app-nav>
+    <app-nav></app-nav>
     <div class="content">
 
         <section>
-            <div class="header">
-                <h1>Admin</h1>
-            </div>
-            <div class="body">
+            <header>
+                <div class="left">
+                    <h1>Admin</h1>
+                </div>
+            </header>
+            <article>
                 <div class="elements">
                     <div class="element messages">
                         <div class="element__icon" [routerLink]="['/dashboard/messages']">
@@ -15,14 +17,16 @@
                         <div class="element__name">Messages</div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section>
-            <div class="header">
-                <h1>Projekty</h1>
-            </div>
-            <div class="body">
+            <header>
+                <div class="left">
+                    <h1>Projekty</h1>
+                </div>
+            </header>
+            <article>
                 <div class="elements">
                     <div class="element add">
                         <div class="element__icon" [routerLink]="['/dashboard/project']">
@@ -30,16 +34,14 @@
                         </div>
                         <div class="element__name">Dodaj</div>
                     </div>
-                </div>
-                <div class="elements" *ngFor="let project of projects">
-                    <div class="element">
+                    <div class="element" *ngFor="let project of projects">
                         <div class="element__icon" [routerLink]="['/dashboard/project', {id: project.id}]">
                             <!-- <fa-icon [icon]="faAdd"></fa-icon> -->
                         </div>
                         <div class="element__name">{{ project.name }}</div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
     </div>

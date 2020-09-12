@@ -3,11 +3,12 @@
     <div class="content">
 
         <section>
-            <div class="header">
-                <h1>Edytor</h1>
-                <div class="hr"></div>
-            </div>
-            <div class="body">
+            <header>
+                <div class="left">
+                    <h1>Edytor</h1>
+                </div>
+            </header>
+            <article>
 
                 <form [formGroup]="projectForm" (ngSubmit)="submit(projectForm.value)">
                     <div class="input" [ngClass]="{'invalid': projectForm.controls['name'].invalid && (projectForm.controls['name'].dirty || projectForm.controls['name'].touched),
@@ -96,20 +97,22 @@
                     </div>
                 </form>
 
-            </div>
+            </article>
         </section>
 
         <section>
-            <div class="header">
-                <h1>Images</h1>
-            </div>
-            <div class="body">
+            <header>
+                <div class="left">
+                    <h1>Images</h1>
+                </div>
+            </header>
+            <article>
                 <div class="images">
                     <div class="image" *ngFor="let image of project?.images">
                         <img [src]="image.url" [alt]="image.name">
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
     </div>

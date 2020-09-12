@@ -1,22 +1,16 @@
 <div class="portfolio">
-    <app-nav [color]="'#f14948'"></app-nav>
+    <app-nav></app-nav>
     <div class="content">
 
         <section>
-            <div class="header">
-                <h1>Projekty</h1>
-            </div>
-            <div class="body">
-                <!-- <div class="cards">
-                    <div class="card" *ngFor="let project of projects" [routerLink]="['/portfolio/project', {id: project.id}]">
-                        <div class="card__preview" 
-                            [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center', 'background-size': 'auto 300px' }"
-                        ></div>
-                        <span>{{ project.name }}</span>
-                    </div>
-                </div> -->
+            <header>
+                <div class="left">
+                    <h1>Projekty</h1>
+                </div>
+            </header>
+            <article>
                 <app-slider [items]="projects"></app-slider>
-            </div>
+            </article>
         </section>
 
     </div>

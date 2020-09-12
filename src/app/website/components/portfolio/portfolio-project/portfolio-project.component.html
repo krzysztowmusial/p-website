@@ -1,8 +1,39 @@
 <div class="project">
-    <app-nav [color]="'#f14948'"></app-nav>
+    <app-nav></app-nav>
     <div class="content">
 
+        <section class="project" *ngIf="project">
+            <header>
+                <div class="left">
+                    <h2>{{ project.category }}</h2>
+                    <h1>{{ project.name }}</h1>
+                    <ul>
+                        <li><a [href]="project.repo" target="_blank">Github</a></li>
+                        <li><a [href]="project.www" target="_blank">Demo</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h3 [title]="project.date.toDate() | date: 'd/M/yyy'">{{ project.date.toDate() | dateAgo }}</h3>
+                </div>
+            </header>
+            <article>
+                <p>{{ project.desc }}</p>
+                <div class="project__tags">
+                    <span *ngFor="let tag of tags"> {{ tag }} </span>
+                </div>
+            </article>
+        </section>
+
         <section>
+            <header>
+                <div class="left">
+                    <h1>Images</h1>
+                </div>
+            </header>
+            <article></article>
+        </section>
+
+        <!-- <section>
             <div class="projekt" *ngIf="project">
                 <div class="projekt__preview" [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat center center'}"></div>
                 <div class="projekt__info">
@@ -31,34 +62,7 @@
 
         <section *ngIf="images">
             <app-gallery [items]="images"></app-gallery>
-        </section>
+        </section> -->
 
     </div>
 </div>
-
-<!-- <div class="project">
-    <app-nav [color]="'#f14948'"></app-nav>
-    <div class="content">
-
-        <section class="projekt">
-            <div class="projekt__preview">
-                <div class="projekt__preview__image" #preview></div>
-                <div class="projekt__preview__info">
-                    <div>
-                        <h2> {{ project?.category }} </h2>
-                        <h1> {{ project?.name }} </h1>
-                        <h3> {{ project?.date.toDate() | date: 'M/d/yyyy' }} </h3>
-                        <p> {{ project?.desc }} </p>
-                    </div>
-                    <div class="projekt__preview__info__tags">
-                        <span *ngFor="let tag of tags"> {{ tag }} </span>
-                    </div>
-                </div>
-            </div>
-            <div class="projekt__images">
-                <div class="projekt__images__image" *ngFor="let image of images; let i = index" [ngStyle]="{ 'background': 'url(' + image.url + ')' }" (click)="changePreview(i)"></div>
-            </div>
-        </section>
-
-    </div>
-</div> -->

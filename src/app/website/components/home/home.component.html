@@ -1,8 +1,176 @@
-<div class="home">
-    <app-nav [color]="'#f14948'"></app-nav>
+<main>
+    <app-nav></app-nav>
+    <!-- <app-nav [color]="'#f14948'"></app-nav> -->
     <div class="content">
-        
+
         <section>
+            <header>
+                <div class="left">
+                    <h1>{{ home.about.name }} </h1>
+                    <h2>{{ home.about.title }}</h2>
+                </div>
+                <!-- <div class="right">
+                    <h3>Wszystkie</h3>
+                </div> -->
+            </header>
+            <article class="about">
+                <p>{{ home.about.desc }}</p>
+                <div class="about__lists">
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M7.5 6.875a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM3.438 13.125v-1.25a2.5 2.5 0 012.5-2.5h3.125a2.5 2.5 0 012.5 2.5v1.25"/>
+                                <path stroke="#333" d="M3.438 13.125h8.124"/>
+                            </svg>
+                            {{ home.about.data.name }}
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.75A1.875 1.875 0 107.5 5a1.875 1.875 0 000 3.75z"/>
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M11.036 10.41l-2.652 2.652a1.248 1.248 0 01-1.767 0l-2.653-2.651a5 5 0 117.072 0v0z"/>
+                            </svg>
+                            {{ home.about.data.location }}
+                        </li>
+                        <li [routerLink]="['/contact']">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M11.875 3.125h-8.75c-.69 0-1.25.56-1.25 1.25v6.25c0 .69.56 1.25 1.25 1.25h8.75c.69 0 1.25-.56 1.25-1.25v-6.25c0-.69-.56-1.25-1.25-1.25z"/>
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M1.875 4.375L7.5 8.125l5.625-3.75"/>
+                            </svg>
+                            Contact
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                            </svg>
+                            <a href="{{ home.about.links.linkedin }}">Linkedin</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                            </svg>
+                            <a href="{{ home.about.links.github }}">GitHub</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 15 15">
+                                <path stroke="#333" stroke-linecap="round" stroke-linejoin="round" d="M6.875 4.375H3.75a1.25 1.25 0 00-1.25 1.25v5.625a1.25 1.25 0 001.25 1.25h5.625a1.25 1.25 0 001.25-1.25V8.125M6.25 8.75L12.5 2.5M9.375 2.5H12.5v3.125"/>
+                            </svg>
+                            <a href="{{ home.about.links.dribbble }}">Dribbble</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <div class="left">
+                    <h1>Skills</h1>
+                </div>
+                <!-- <div class="right">
+                    <h3></h3>
+                </div> -->
+            </header>
+            <article>
+                <ul class="skills">
+                    <li>
+                        <div class="skills__icon"></div>
+                        <h2>HTML</h2>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>CSS</h2>
+                            <p>Sass, BEM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <h2>JavaScript</h2>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>Angular</h2>
+                            <p>TypeScript</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>node.js</h2>
+                            <p>Express</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>SQL</h2>
+                            <p>MySQL / MariaDB</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>noSQL</h2>
+                            <p>MongoDB</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>git</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>Terminal</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>Adobe</h2>
+                            <p>Photoshop, XD</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="skills__icon"></div>
+                        <div>
+                            <h2>Figma</h2>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <div class="left">
+                    <h1>Projects</h1>
+                    <p>Last 5 projects I've done</p>
+                </div>
+                <div class="right">
+                    <h3 [routerLink]="['/portfolio']">See more</h3>
+                </div>
+            </header>
+            <article>
+                <app-slider [items]="projects"></app-slider>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <div class="left">
+                    <h1>Education</h1>
+                </div>
+            </header>
+            <article></article>
+        </section>
+        
+        <!-- <section>
             <div class="header">
                 <h1>{{ home.about.name }} </h1>
                 <h2>{{ home.about.title }}</h2>
@@ -103,7 +271,7 @@
                 <h1>Doświadczenie</h1>
                 <div class="hr"></div>
             </div>
-        </section>
+        </section> -->
 
     </div>
-</div>
+</main>
