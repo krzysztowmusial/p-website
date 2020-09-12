@@ -1,0 +1,112 @@
+.swiper {
+    max-width: 940px;
+    margin: 0 -4rem;
+    overflow: hidden;
+    position: relative;
+
+    &__nav-left, &__nav-right {
+        z-index: 1;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #d9dade;
+        border-radius: 50%;
+        background: white;
+        transform: translate(0, -50%);
+        display: none;
+
+        &.active {
+            display: flex;
+            cursor: pointer;
+            
+            fa-icon {
+                color: black;
+            }
+        }
+    }
+    &__nav-left {
+        top: 50%;
+        left: 5px;
+    }
+    &__nav-right {
+        top: 50%;
+        right: 5px;
+    }
+
+    &__elements {
+        padding: 0 4rem;
+    }
+}
+
+// SKILLS
+.skills {
+    margin-bottom: -1rem;
+    // margin-right: -2rem;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        list-style: none;
+        max-height: 200px;
+
+        li {
+            width: 160px;
+            // margin: 0 2rem 1rem 0;
+            margin: 0 4rem 1rem 0;
+            display: flex;
+            align-items: center;
+    
+            .skills__icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 1rem;
+                background: grey;
+                border-radius: 5px;
+            }
+    
+            p {
+                color: var(--grey);
+            }
+        }
+    }
+}
+
+// PROJECTS
+.projects {
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            flex-shrink: 0;
+            width: 250px;
+            height: 300px;
+            margin-right: 4rem;
+            background: pink;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .swiper {
+        // width: calc(100% + 4rem);
+        // margin: 0 -2rem;
+        position: static;
+
+        &__nav-left, &__nav-right {
+            display: none;
+
+            &.active {
+                display: none;
+            }
+        }
+    }
+}

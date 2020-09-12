@@ -1,0 +1,41 @@
+<div class="swiper">
+    <div class="swiper__nav-left" [ngClass]="{'active' : this.element.position < 0}" (click)="move('left')"><fa-icon [icon]="faLeft"></fa-icon></div>
+    <div class="swiper__nav-right" [ngClass]="{'active' : this.elementsOut < this.temp - this.elementsPerScreen}" (click)="move('right')"><fa-icon [icon]="faRight"></fa-icon></div>
+    <!-- <div #slider class="slider__cards" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend()">
+        <div class="slider__card" 
+            *ngFor="let item of items" 
+            [routerLink]="['/portfolio/project', {id: item?.id}]"
+            [ngStyle]="{ 'background': 'url(' + item?.preview + ') no-repeat center center'}"
+        ></div>
+        <div class="slider__margin-right"></div>
+    </div> -->
+
+    <div #swiper class="swiper__elements" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend()">
+
+        <!-- Skills -->
+        <div *ngIf="mode == 'skills'" class="skills">
+            <ul>
+                <li *ngFor="let element of elements">
+                    <div class="skills__icon" [ngClass]="element.class"></div>
+                    <div>
+                        <h2>{{ element.title }}</h2>
+                        <p>{{ element.subtitle }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div *ngIf="mode == 'projects'" class="projects">
+            <ul>
+                <li 
+                *ngFor="let element of elements" 
+                [routerLink]="['/portfolio/project', {id: element?.id}]"
+                [ngStyle]="{ 'background': 'url(' + element?.preview + ') no-repeat center center'}"
+                ></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

@@ -29,8 +29,7 @@ import { PortfolioHomeComponent } from './website/components/portfolio/portfolio
 import { PortfolioProjectComponent } from './website/components/portfolio/portfolio-project/portfolio-project.component';
 import { DashboardMessagesComponent } from './website/components/dashboard/dashboard-messages/dashboard-messages.component';
 import { DateAgoPipe } from './website/shared/pipes/date-ago.pipe';
-import { SliderComponent } from './website/shared/components/slider/slider.component';
-import { GalleryComponent } from './website/shared/components/gallery/gallery.component';
+import { SwiperComponent } from './website/shared/components/swiper/swiper.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +49,7 @@ import { GalleryComponent } from './website/shared/components/gallery/gallery.co
     PortfolioProjectComponent,
     DashboardMessagesComponent,
     DateAgoPipe,
-    SliderComponent,
-    GalleryComponent,
+    SwiperComponent,
   ],
   imports: [
     BrowserModule,
