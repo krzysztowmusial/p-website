@@ -14,11 +14,6 @@ html {
     font-size: 12px;
 }
 
-// body {
-    // min-height: 100vh;
-    // background: linear-gradient(180deg, #E7E7E7 0%, #F2F0F2 100%);
-// }
-
 h1 {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -246,31 +241,11 @@ section {
 @media (max-width: 1000px) {
     section {
 
-        // .header {
-
-        //     h1, h2 {
-        //         text-align: center;
-        //     }
-
-        //     .hr {
-        //         // display: none;
-        //         margin: 10px auto 0;
-        //     }
-        // }
-
         .body {
-
-            // display: flex;
-            // justify-content: space-around;
 
             p {
                 margin: 0;
-                // text-align: center;
             }
-
-            // ul {
-            //     margin-right: 0;
-            // }
         }
     }
 }
