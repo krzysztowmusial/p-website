@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
 
@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
   templateUrl: './swiper.component.html',
   styleUrls: ['./swiper.component.scss']
 })
-export class SwiperComponent implements OnInit, AfterViewInit {
+export class SwiperComponent implements OnInit {
 
     // icons
     faLeft = faAngleLeft;
@@ -43,17 +43,6 @@ export class SwiperComponent implements OnInit, AfterViewInit {
         } else {
             this.elementsPerScreen = Math.floor(window.innerWidth / this.element.width);
         }
-        console.log(this.elements)
-    }
-
-    ngAfterViewInit(): void {
-        // // define the length of the list of elements
-        // if (this.mode == 'skills') {
-        //     this.temp = this.elements.length / 3;   // divided by number of the rows
-        // } else if (this.mode == 'projects') {
-        //     this.temp = this.elements.length;       // since there is only one row, the length of the lists of elements == elements.length
-        // }
-        // console.log(this.elements)
     }
 
     move(direction: string) {

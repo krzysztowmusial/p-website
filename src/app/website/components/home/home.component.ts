@@ -24,24 +24,6 @@ export class HomeComponent implements OnInit {
             this.projects = projects;
             this.projects.reverse();
         })
-
-        // this.projects = [
-        //     {
-        //         preview: 'https://firebasestorage.googleapis.com/v0/b/krzysztowmusial-p-website.appspot.com/o/projects%2FOM0RwaInxMr5Yn2BfgS4%2Fimages%2Fpreview?alt=media&token=bc47816f-8202-4a5a-adae-f3449e690f41'
-        //     },
-        //     {
-        //         preview: 'https://firebasestorage.googleapis.com/v0/b/krzysztowmusial-p-website.appspot.com/o/projects%2FOM0RwaInxMr5Yn2BfgS4%2Fimages%2Fpreview?alt=media&token=bc47816f-8202-4a5a-adae-f3449e690f41'
-        //     },
-        //     {
-        //         preview: 'https://firebasestorage.googleapis.com/v0/b/krzysztowmusial-p-website.appspot.com/o/projects%2FOM0RwaInxMr5Yn2BfgS4%2Fimages%2Fpreview?alt=media&token=bc47816f-8202-4a5a-adae-f3449e690f41'
-        //     },
-        //     {
-        //         preview: 'https://firebasestorage.googleapis.com/v0/b/krzysztowmusial-p-website.appspot.com/o/projects%2FOM0RwaInxMr5Yn2BfgS4%2Fimages%2Fpreview?alt=media&token=bc47816f-8202-4a5a-adae-f3449e690f41'
-        //     },
-        //     {
-        //         preview: 'https://firebasestorage.googleapis.com/v0/b/krzysztowmusial-p-website.appspot.com/o/projects%2FOM0RwaInxMr5Yn2BfgS4%2Fimages%2Fpreview?alt=media&token=bc47816f-8202-4a5a-adae-f3449e690f41'
-        //     },
-        // ]
         
         this.home = {
             about: {
@@ -62,105 +44,6 @@ export class HomeComponent implements OnInit {
         }
 
         this.skills = [
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
-            {
-                title: 'HTML',
-                class: 'html'
-            },
-            {
-                title: 'CSS',
-                subtitle: 'Sass, BEM',
-                class: 'css'
-            },
             {
                 title: 'HTML',
                 class: 'html'

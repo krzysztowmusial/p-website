@@ -1,6 +1,6 @@
 .swiper {
-    max-width: 940px;
-    margin: 0 -4rem;
+    max-width: 844px;
+    // margin: 0 -4rem;
     overflow: hidden;
     position: relative;
 
@@ -37,7 +37,7 @@
     }
 
     &__elements {
-        padding: 0 4rem;
+        // padding: 0 4rem;
     }
 }
 
@@ -57,7 +57,7 @@
         li {
             width: 160px;
             // margin: 0 2rem 1rem 0;
-            margin: 0 4rem 1rem 0;
+            margin: 0 2rem 1rem 0;
             display: flex;
             align-items: center;
     
@@ -87,7 +87,7 @@
             flex-shrink: 0;
             width: 250px;
             height: 300px;
-            margin-right: 4rem;
+            margin-right: 2rem;
             background: pink;
             border-radius: 10px;
             cursor: pointer;
