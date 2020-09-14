@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faTerminal, faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJsSquare, faAngular, faNodeJs, faAdobe, faFigma } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 
 @Component({
@@ -12,6 +13,17 @@ export class SwiperComponent implements OnInit {
     // icons
     faLeft = faAngleLeft;
     faRight = faAngleRight;
+    // list icons
+    faHtml = faHtml5;
+    faCss = faCss3Alt;
+    faJavascript = faJsSquare;
+    faAngular = faAngular;
+    faNode = faNodeJs;
+    faOther = faTerminal;
+    faAdobe = faAdobe;
+    faSql = faDatabase;
+    faNosql = faDatabase;
+    faFigma = faFigma;
 
     @ViewChild('swiper') swiper: ElementRef;
     @Input() mode;              // defines the style of swiper component: 'skills', 'gallery' or 'projects'
@@ -50,13 +62,13 @@ export class SwiperComponent implements OnInit {
         if (direction == 'right' && this.elementsOut < this.temp - this.elementsPerScreen) {
             let distance = -this.element.width
             let x = distance + this.element.position;
-            gsap.to(this.swiper.nativeElement, {x: x})
+            gsap.to(this.swiper.nativeElement, {marginLeft: x})
             this.element.position = x;
             this.elementsOut += 1;
         } else if (direction == 'left' && this.element.position < 0) {
             let distance = this.element.width
             let x = distance + this.element.position;
-            gsap.to(this.swiper.nativeElement, {x: x})
+            gsap.to(this.swiper.nativeElement, {marginLeft: x})
             this.element.position = x;
             this.elementsOut -= 1;
         }
@@ -72,13 +84,21 @@ export class SwiperComponent implements OnInit {
     touchend() {
         let start = this.touches[0];
         let end = this.touches.pop();
-        if (start > end) {
-            this.move('right')
-            this.touches = [];
+
+        let abs = Math.abs(start - end);
+
+        if (abs > 100) {
+            if (start > end) {
+                this.move('right')
+                this.touches = [];
+            } else {
+                this.move('left')
+                this.touches = [];
+            }
         } else {
-            this.move('left')
-            this.touches = [];
+            console.log('swipe too short')
         }
+
     }
 
 }

@@ -1,22 +1,25 @@
-<div class="swiper">
+<div class="swiper" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend()">
     <div class="swiper__nav-left" [ngClass]="{'active' : this.element.position < 0}" (click)="move('left')"><fa-icon [icon]="faLeft"></fa-icon></div>
     <div class="swiper__nav-right" [ngClass]="{'active' : this.elementsOut < this.temp - this.elementsPerScreen}" (click)="move('right')"><fa-icon [icon]="faRight"></fa-icon></div>
-    <!-- <div #slider class="slider__cards" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend()">
-        <div class="slider__card" 
-            *ngFor="let item of items" 
-            [routerLink]="['/portfolio/project', {id: item?.id}]"
-            [ngStyle]="{ 'background': 'url(' + item?.preview + ') no-repeat center center'}"
-        ></div>
-        <div class="slider__margin-right"></div>
-    </div> -->
 
-    <div #swiper class="swiper__elements" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend()">
+    <div #swiper class="swiper__elements">
 
         <!-- Skills -->
         <div *ngIf="mode == 'skills'" class="skills">
             <ul>
                 <li *ngFor="let element of elements">
-                    <div class="skills__icon" [ngClass]="element.class"></div>
+                    <div class="skills__icon" [ngClass]="element.class">
+                        <fa-icon *ngIf="element.class == 'html'" [icon]="faHtml"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'css'" [icon]="faCss"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'javascript'" [icon]="faJavascript"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'angular'" [icon]="faAngular"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'node'" [icon]="faNode"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'other'" [icon]="faOther"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'adobe'" [icon]="faAdobe"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'sql'" [icon]="faSql"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'nosql'" [icon]="faNosql"></fa-icon>
+                        <fa-icon *ngIf="element.class == 'figma'" [icon]="faFigma"></fa-icon>
+                    </div>
                     <div>
                         <h2>{{ element.title }}</h2>
                         <p>{{ element.subtitle }}</p>
@@ -24,7 +27,6 @@
                 </li>
             </ul>
         </div>
-
         <!-- Projects -->
         <div *ngIf="mode == 'projects'" class="projects">
             <ul>
@@ -35,6 +37,7 @@
                 ></li>
             </ul>
         </div>
+        <!--  -->
 
     </div>
 

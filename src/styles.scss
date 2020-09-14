@@ -13,6 +13,7 @@
     box-sizing: border-box;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
 }
 
 html {
@@ -198,14 +199,47 @@ main {
                 margin: 0;
                 padding: 0;
             }
+
+            &.noborder {
+                border: none;
+                padding: 0;
+            }
         }
+    }
+}
+
+.alert {
+    padding: 1rem 2rem;
+    border: 1px solid grey;
+    background: rgba(128, 128, 128, 0.1);
+    color: grey;
+
+    &.blue {
+        border: 1px solid var(--accent);
+        background: rgba(30, 143, 255, 0.1);
+        color: var(--accent);
+    }
+    &.yellow {
+        border: 1px solid orange;
+        background: rgba(255, 166, 0, 0.1);
+        color: orange;
+    }
+    &.red {
+        border: 1px solid tomato;
+        background: rgba(255, 99, 71, 0.1);
+        color: tomato;
+    }
+    &.green {
+        border: 1px solid mediumseagreen;
+        background: rgba(60, 179, 114, 0.1);
+        color: mediumseagreen;
     }
 }
 
 @media (max-width: 1000px) {
     main {
         .content {
-            padding: calc(60px + 2rem) 2rem;
+            padding: 2rem 2rem calc(60px + 4rem) 2rem;
         }
     }
 }

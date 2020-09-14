@@ -8,7 +8,7 @@ import { ProjectsService } from 'src/app/website/shared/services/projects.servic
 })
 export class PortfolioHomeComponent implements OnInit {
 
-    projects = null;
+    projects = [];
 
     constructor(private projectsService: ProjectsService) { }
 

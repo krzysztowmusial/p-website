@@ -9,7 +9,23 @@
                 </div>
             </header>
             <article>
-                
+                <app-swiper 
+                    *ngIf="projects.length > 0" 
+                    [mode]="'projects'" 
+                    [elements]="projects" 
+                    [element]="{ width: 274, position: 0 }"
+                ></app-swiper>
+            </article>
+        </section>
+
+        <section>
+            <header>
+                <div class="left">
+                    <h1>Notatki</h1>
+                </div>
+            </header>
+            <article>
+                <div class="alert blue">Nothing to see here yet</div>
             </article>
         </section>
 

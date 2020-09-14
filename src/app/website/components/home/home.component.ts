@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
         this.projectsService.getProjects().subscribe((projects)=>{
             this.projects = projects;
             this.projects.reverse();
+            this.projects = this.projects.slice(0, 3);
         })
         
         this.home = {
@@ -52,6 +53,44 @@ export class HomeComponent implements OnInit {
                 title: 'CSS',
                 subtitle: 'Sass, BEM',
                 class: 'css'
+            },
+            {
+                title: 'JavaScript',
+                class: 'javascript'
+            },
+            {
+                title: 'Angular',
+                subtitle: 'TypeScript, SPA',
+                class: 'angular'
+            },
+            {
+                title: 'node.js',
+                subtitle: 'npm, Express',
+                class: 'node'
+            },
+            {
+                title: 'Other',
+                subtitle: 'Git, CLI',
+                class: 'other'
+            },
+            {
+                title: 'Adobe',
+                subtitle: 'Photoshop, XD',
+                class: 'adobe'
+            },
+            {
+                title: 'SQL',
+                subtitle: 'MySQL / MariaDB',
+                class: 'sql'
+            },
+            {
+                title: 'noSQL',
+                subtitle: 'MongoDB',
+                class: 'nosql'
+            },
+            {
+                title: 'Figma',
+                class: 'figma'
             },
         ]
 

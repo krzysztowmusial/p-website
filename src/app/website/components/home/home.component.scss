@@ -19,6 +19,8 @@
                 align-items: center;
     
                 svg {
+                    width: 18px;
+                    height: 18px;
                     margin-right: 1rem;
                 }
     
@@ -70,6 +72,73 @@
     }
 }
 
+.education {
+    // padding-left: 2rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+
+            &:nth-last-child(1) {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-left: 2px solid var(--accent);
+                padding-left: 1rem;
+
+                .left {
+
+                    p {
+
+                        &:nth-child(1) {
+                            font-size: 1.2rem;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                        }
+                        &:nth-child(2) {
+                            font-size: 1.2rem;
+                            color: grey;
+                        }
+                    }
+                }
+                .right {
+                    
+                    span {
+                        display: inline-block;
+                        color: var(--accent);
+                        padding: 0.2rem 0.5rem;
+                        border: 1px solid var(--accent);
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            article {
+                padding-left: calc(1rem + 2px);
+
+                // p {
+
+                //     &:nth-child(1) {
+                //         font-size: 1.2rem;
+                //         text-transform: uppercase;
+                //         font-weight: 700;
+                //     }
+                // }
+            }
+        }
+    }
+}
+
 @media (max-width: 1000px) {
     .about {
         flex-direction: column;
@@ -85,5 +154,18 @@
     }
     .skills {
         max-height: 400px;
+    }
+    .education {
+        ul {
+            li {
+                header {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    .right {
+                        margin-bottom: .5rem;
+                    }
+                }
+            }
+        }
     }
 }

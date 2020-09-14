@@ -35,7 +35,7 @@
                         <div class="element__name">Dodaj</div>
                     </div>
                     <div class="element" *ngFor="let project of projects">
-                        <div class="element__icon" [routerLink]="['/dashboard/project', {id: project.id}]">
+                        <div class="element__icon" [routerLink]="['/dashboard/project', {id: project.id}]" [ngStyle]="{ 'background': 'url(' + project.preview + ') no-repeat' }">
                             <!-- <fa-icon [icon]="faAdd"></fa-icon> -->
                         </div>
                         <div class="element__name">{{ project.name }}</div>
